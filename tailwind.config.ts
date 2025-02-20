@@ -9,16 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        purple_100:'#2D0C50',
-        purple_90:'#441772',
-        purple_80:'#5C2694',
-        purple_70:'#7638B6',
-        purple_60:'#924ED8',
-        purple_50:'#B068FA',
-        purple_40:'#C48BFF',
-        purple_30:'#D5ADFF',
-        purple_20:'#E6CEFF',
-        purple_10:'#F7F0FF',
+        purple_90:'#310B57',
+        purple_80:'#3F0B73',
+        purple_70:'#561499',
+        purple_60:'#7638B6',
+        purple_50:'#9E67D7',
+        purple_40:'#B581EA',
+        purple_30:'#CB99FF',
+        purple_20:'#DEBEFF',
+        purple_10:'#EDDCFF',
         main_black:'#1E1E1E',
         gray_10:'#2C2C2C'
       },
