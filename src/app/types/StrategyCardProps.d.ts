@@ -1,8 +1,11 @@
+import { ReactNode } from "react";
+import { IconType } from "react-icons";
+
 export interface StrategyCardProps {
-  icon:string;
+  icon:ReactNode;
   title:string;
   description:string;
-  list: {icon:string, text:string}[];
+  list: {icon:IconType, text:string}[];
   buttonText:string;
 
 }

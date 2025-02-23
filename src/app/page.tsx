@@ -4,6 +4,7 @@ import { Partners } from "@/app/components/sections/Partners";
 import { DifferentThinking } from "@/app/components/sections/DifferentThinking";
 import { Strategies } from "@/app/components/sections/Strategies";
 import { Footer } from "@/app/components/Footer";
+import { LetsGrowTogheter } from "@/app/components/sections/LetsGrowTogheter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Partners/>
         <DifferentThinking/>
         <Strategies/>
+        <LetsGrowTogheter/>
       </main>
       <Footer/>
     </>
