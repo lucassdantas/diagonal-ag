@@ -21,27 +21,27 @@ export const Form = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage(null); // Resetar mensagem ao iniciar o envio
-
+  
     try {
-      const currentUrl = location.protocol+'//'+location.hostname+'/backend/send-email.php'
-      const response = await fetch( currentUrl, {
+      const currentUrl = location.protocol + '//' + location.hostname + '/backend/send-email.php';
+      const response = await fetch(currentUrl, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData),
       });
-
-      const result = await response.text();
-      if (response.ok) {
-        setMessage("✅ Enviado com sucesso!");
+  
+      const result = await response.json(); // Agora interpretamos como JSON
+      if (result.success) {
+        setMessage("✅ " + result.message);
         setFormData({
           name: "",
           companyName: "",
           email: "",
           phone: "",
           position: "socio_fundador",
-        }); // Resetar o formulário após sucesso
+        });
       } else {
-        setMessage("❌ Erro ao enviar: " + result);
+        setMessage("❌ " + result.message);
       }
     } catch (error) {
       setMessage("❌ Erro ao enviar o formulário. Tente novamente.");

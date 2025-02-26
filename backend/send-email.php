@@ -61,14 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Enviar e-mail
         if ($mail->send()) {
-            echo "Mensagem enviada com sucesso!";
+            echo json_encode(["success" => true, "message" => "Mensagem enviada com sucesso!"]);
         } else {
-            echo "Erro ao enviar mensagem.";
+            echo json_encode(["success" => false, "message" => "Erro ao enviar mensagem."]);
         }
     } catch (Exception $e) {
         echo "Erro ao enviar e-mail: {$mail->ErrorInfo}";
     }
 } else {
-    echo "Método inválido.";
+    echo json_encode(["success" => false, "message" => "Método inválido."]);
 }
 ?>
