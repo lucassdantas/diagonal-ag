@@ -7,8 +7,8 @@ import { Title } from '@/app/components/Title'
 import { BiEnvelope } from 'react-icons/bi'
 export const Footer = () => {
   return (
-    <footer className=' bg-main_black text-main_white pt-4 text-center '>
-      <div className='flex flex-col gap-4 px-4 mb-8'>
+    <footer className=' bg-main_black text-main_white pt-8 text-center '>
+      <div className='flex flex-col gap-4 px-4 mb-12'>
         <p>Pense <span className='text-purple_60'>diferente</span>. Pense na <span className='text-purple_60'>Diagonal</span>.</p>
         <Image src={diagonalLogoWithoutBg} alt='Logo diagonal vazada'/>
         <Title tag='h6' className='font-normal mt-4'>Confira nossas redes sociais:</Title>
@@ -17,7 +17,7 @@ export const Footer = () => {
         </div>
         <span className='flex justify-center items-center gap-4'><BiEnvelope className='text-purple_40 text-3xl'/> contato@diagonal.ag</span>
       </div>
-      <div className='bg-gray_10 text-white text-center p-4'>
+      <div className='bg-gray_10 text-gray_40 text-center p-4'>
         <small>© {new Date().getFullYear()} Diagonal - Todos os direitos reservados</small>
       </div>
     </footer>

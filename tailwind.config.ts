@@ -20,6 +20,7 @@ export default {
         purple_10:'#EDDCFF',
         main_black:'#1E1E1E',
         gray_10:'#2C2C2C',
+        gray_40:'#656565',
         main_white:'#F9F6F2'
       },
     },
