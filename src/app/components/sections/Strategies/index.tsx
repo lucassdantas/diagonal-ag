@@ -8,7 +8,7 @@ export const Strategies = () => {
   return (
     <Section className='text-center' id='services'>
       <Title tag='h2' className='mb-8'>Estratégias que geram <span className='text-purple_60'>movimento e conversão</span></Title>
-      <div className='flex flex-col flex-wrap my-4'>
+      <div className='flex flex-col lg:flex-row gap-8 items-center lg:items-start flex-wrap my-4'>
         {cardsContent.map((cardContent, i) => (
           <StrategyCard 
             key={i}

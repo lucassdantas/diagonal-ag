@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className='scroll-smooth'>
       <body
-        className={`${plusJakartaSans.className} antialiased`}
+        className={`${plusJakartaSans.className} antialiased overflow-x-hidden`}
       >
         {children}
       </body>

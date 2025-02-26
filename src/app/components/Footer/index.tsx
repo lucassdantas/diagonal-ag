@@ -8,7 +8,7 @@ import { BiEnvelope } from 'react-icons/bi'
 export const Footer = () => {
   return (
     <footer className=' bg-main_black text-main_white pt-8 text-center '>
-      <div className='flex flex-col gap-4 px-4 mb-12'>
+      <div className='flex flex-col lg:items-center gap-4 px-4 mb-12'>
         <p>Pense <span className='text-purple_60'>diferente</span>. Pense na <span className='text-purple_60'>Diagonal</span>.</p>
         <Image src={diagonalLogoWithoutBg} alt='Logo diagonal vazada'/>
         <Title tag='h6' className='font-normal mt-4'>Confira nossas redes sociais:</Title>

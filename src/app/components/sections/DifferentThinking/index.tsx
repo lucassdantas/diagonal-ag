@@ -12,8 +12,8 @@ export const DifferentThinking = () => {
     {text:'Marketing que gera impacto real: de leads a novos alunos'},
   ]
   return (
-    <Section className='py-12 text-center'>
-      <div className='flex flex-col gap-4 mb-8 items-center'>
+    <Section className='py-12 text-center lg:text-left' limiterClassName='lg:flex items-center justify-between'>
+      <div className='flex flex-col gap-4 mb-8 items-center lg:items-start lg:w-[50%]'>
         <Title tag='h2'>Pensamos diferente. <br/><span className='text-purple_60'>Movemos resultados.</span></Title>
         <p>Criamos estratégias completas para seu negócio crescer no mundo do Fitness & Wellness. Do posicionamento da sua marca ao crescimento digital, somos especialistas em transformar presença em performance.</p>
         <ul className='flex flex-col'>
@@ -21,7 +21,7 @@ export const DifferentThinking = () => {
         </ul>
         <Button url='#form'>Fale com a gente</Button>
       </div>
-      <div>
+      <div className='lg:w-[40%]'>
         <Image src={moveResultsImage} alt='movemos resultados'/>
       </div>
     </Section>
