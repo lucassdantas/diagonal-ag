@@ -1,10 +1,9 @@
 import { SocialNetworkProps } from "@/app/types/SocialNetworkProps";
-import { BiLinkExternal } from "react-icons/bi";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 
 export const facebook:SocialNetworkProps = {
-    icon:FaFacebook, 
+    icon:FaFacebookSquare, 
     url:'#'
 }
 export const instagram:SocialNetworkProps = {
@@ -12,7 +11,7 @@ export const instagram:SocialNetworkProps = {
     url:'#'
 }
 export const linkedin:SocialNetworkProps = {
-    icon:BiLinkExternal, 
+    icon:FaLinkedinIn, 
     url:'#'
 }
 export const whatsApp:SocialNetworkProps = {
@@ -21,8 +20,8 @@ export const whatsApp:SocialNetworkProps = {
 }
 
 export const allSocialNetworksList = [
-  facebook,
   instagram,
+  facebook,
   linkedin,
   whatsApp
 ]
