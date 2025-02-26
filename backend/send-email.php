@@ -1,9 +1,12 @@
 <?php
+header("Access-Control-Allow-Origin: *"); // Permite requisições de qualquer origem
+header("Access-Control-Allow-Methods: POST, OPTIONS"); // Permite apenas métodos específicos
+header("Access-Control-Allow-Headers: Content-Type"); // Permite cabeçalhos específicos
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Carregar PHPMailer via Composer
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Função para sanitizar inputs e evitar XSS
@@ -33,17 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
         // Configurar o servidor SMTP
+        require_once './emaiLCredencials.php';
         $mail->isSMTP();
-        $mail->Host       = 'smtp.seudominio.com'; // Servidor SMTP (ex: smtp.gmail.com)
+        $mail->Host       = $smtpHost; // Servidor SMTP (ex: smtp.gmail.com)
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'seuemail@seudominio.com'; // Seu e-mail SMTP
-        $mail->Password   = 'suasenha'; // Sua senha SMTP
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // TLS ou PHPMailer::ENCRYPTION_SMTPS para SSL
-        $mail->Port       = 587; // Porta SMTP (465 para SSL, 587 para TLS)
+        $mail->Username   = $smtpEmail; // Seu e-mail SMTP
+        $mail->Password   = $smtpPassword; // Sua senha SMTP
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // TLS ou PHPMailer::ENCRYPTION_SMTPS para SSL
+        $mail->Port       = $smtpPortNumber; // Porta SMTP (465 para SSL, 587 para TLS)
 
         // Configurar remetente e destinatário
-        $mail->setFrom('no-reply@seudominio.com', 'Seu Nome');
-        $mail->addAddress('seuemail@seudominio.com'); // Para onde o formulário será enviado
+        $mail->setFrom($smtpEmail, $name);
+        $mail->addAddress($smtpEmail); // Para onde o formulário será enviado
         $mail->addReplyTo($email, $name); // Permite responder ao remetente
 
         // Conteúdo do e-mail

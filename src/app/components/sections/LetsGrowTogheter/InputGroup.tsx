@@ -5,6 +5,7 @@ interface InputGroupProps {
   inputClassName?: string;
   containerClassName?: string;
   inputType: string;
+  value:string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // Nova prop
 }
 
@@ -15,6 +16,7 @@ export const InputGroup = ({
   labelClassName = '',
   inputType,
   inputClassName = '',
+  value = '',
   onChange, // Recebe a função de mudança
 }: InputGroupProps) => {
   return (
@@ -25,8 +27,10 @@ export const InputGroup = ({
       <input
         name={labelForAndInputName}
         type={inputType}
+        value={value}
         className={`bg-transparent border border-purple_40 rounded-lg p-2 ${inputClassName}`}
-        onChange={onChange} // Aplica a função onChange no input
+        onChange={onChange}
+        required // Aplica a função onChange no input
       />
     </div>
   );
