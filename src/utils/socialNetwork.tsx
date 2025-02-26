@@ -4,19 +4,19 @@ import { FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 
 export const facebook:SocialNetworkProps = {
     icon:FaFacebookSquare, 
-    url:'#'
+    url:'https://www.facebook.com/diagonal.ag'
 }
 export const instagram:SocialNetworkProps = {
     icon:BsInstagram, 
-    url:'#'
+    url:'https://www.instagram.com/diagonal.ag/'
 }
 export const linkedin:SocialNetworkProps = {
     icon:FaLinkedinIn, 
-    url:'#'
+    url:'https://www.linkedin.com/company/diagonal-ag'
 }
 export const whatsApp:SocialNetworkProps = {
     icon:BsWhatsapp, 
-    url:'#'
+    url:'https://api.whatsapp.com/send/?phone=5511914811646'
 }
 
 export const allSocialNetworksList = [

@@ -18,7 +18,7 @@ export const Banner = () => {
       <Forms/>
       <Limiter className='text-center flex flex-col items-center gap-4'>
         <p>Nascemos para ajudar academias, estúdios, clínicas e marcas de bem-estar a crescerem com estratégias que unem branding e performance. Combinamos criatividade e dados para atrair, engajar e converter o público que busca qualidade de vida.</p>
-        <Button>Conheça nossos serviços</Button>
+        <Button url='#services'>Conheça nossos serviços</Button>
       </Limiter>
     </section>
   )

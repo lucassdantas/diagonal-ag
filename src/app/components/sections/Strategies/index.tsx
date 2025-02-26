@@ -6,7 +6,7 @@ import React from 'react'
 
 export const Strategies = () => {
   return (
-    <Section className='text-center'>
+    <Section className='text-center' id='services'>
       <Title tag='h2' className='mb-8'>Estratégias que geram <span className='text-purple_60'>movimento e conversão</span></Title>
       <div className='flex flex-col flex-wrap my-4'>
         {cardsContent.map((cardContent, i) => (

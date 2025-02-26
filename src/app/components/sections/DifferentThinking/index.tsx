@@ -19,7 +19,7 @@ export const DifferentThinking = () => {
         <ul className='flex flex-col'>
           {listItems.map((item, i) => (<li key={i} className='flex gap-4 items-center'> <BiSolidRightArrow className='text-purple_60'/>{item.text}</li>))}
         </ul>
-        <Button>Fale com a gente</Button>
+        <Button url='#form'>Fale com a gente</Button>
       </div>
       <div>
         <Image src={moveResultsImage} alt='movemos resultados'/>

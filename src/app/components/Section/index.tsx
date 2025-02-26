@@ -5,13 +5,14 @@ type SectionProps = {
   children:ReactNode, 
   className?:string,
   limiterClassName?:string
+  id?:string
 }
-export const Section = ({children, className='', limiterClassName=''}:SectionProps) => {
+export const Section = ({children, className='', limiterClassName='', id=''}:SectionProps) => {
   return (
-  <div className={`${className}`}>
+  <section className={`${className}`} id={id}>
     <Limiter className={limiterClassName}>
       {children}
     </Limiter>
-  </div>
+  </section>
   )
 }
