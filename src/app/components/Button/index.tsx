@@ -12,3 +12,8 @@ export const Button = ({children, className='', url='#', target='_blank'}:Button
     <Link className={'rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer max-w-[250px] p-4'+className} href={url} target={target}>{children}</Link>
   )
 }
+export const OutlineButton = ({children, className='', url='#', target='_blank'}:ButtonProps) => {
+  return (
+    <Link className={'rounded-2xl text-purple_60 border-purple_60 border-2 text-center py-4 font-bold cursor-pointer max-w-[250px] p-4 '+className} href={url} target={target}>{children}</Link>
+  )
+}

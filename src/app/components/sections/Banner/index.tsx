@@ -1,6 +1,7 @@
 import { Button } from '@/app/components/Button'
 import { Limiter } from '@/app/components/Limiter'
 import { Forms } from '@/app/components/sections/Banner/Forms'
+import { Title } from '@/app/components/Title'
 import Image from 'next/image'
 import React from 'react'
 
@@ -8,11 +9,11 @@ export const Banner = () => {
   return (
     <section className='bg-main_black text-white text-center pt-8 pb-28 flex flex-col items-center gap-8'>
       <Limiter>
-        <h1 className='text-white text-4xl font-bold'>
+        <Title className='font-bold' tag='h1'>
           Somos a <br/>
           Diagonal <span className='text-purple_40'>.</span>
-        </h1>
-        <h2 className='text-3xl font-bold'>Movemos negócios e pessoas no <span className='text-purple_40'>Fitness & Wellness</span></h2>
+        </Title>
+        <Title tag='h2' className='my-4'>Movemos negócios e pessoas no <span className='text-purple_40'>Fitness & Wellness</span></Title>
       </Limiter>
       <Forms/>
       <Limiter className='text-center flex flex-col items-center gap-4'>
