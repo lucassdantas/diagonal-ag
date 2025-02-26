@@ -19,7 +19,8 @@ export default {
         purple_20:'#DEBEFF',
         purple_10:'#EDDCFF',
         main_black:'#1E1E1E',
-        gray_10:'#2C2C2C'
+        gray_10:'#2C2C2C',
+        main_white:'#F9F6F2'
       },
     },
   },
