@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Form = () => {
   return (
-    <form className='flex flex-col gap-4 py-4 items-center' method='post'>
+    <form className='flex flex-col lg:flex-row flex-wrap lg:justify-center gap-4 py-4 items-center' method='post'>
       <InputGroup labelForAndInputName='name'        labelText='Nome*'              inputType='text'/>
       <InputGroup labelForAndInputName='companyName' labelText='Nome da empresa*'   inputType='text'/>
       <InputGroup labelForAndInputName='email'       labelText='Email corporativo*' inputType='email'/>
