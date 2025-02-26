@@ -4,6 +4,7 @@ import { useState } from "react";
 import { InputGroup } from "@/app/components/sections/LetsGrowTogheter/InputGroup";
 
 export const Form = () => {
+
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -19,7 +20,7 @@ export const Form = () => {
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const response = await fetch("https://seudominio.com/enviar-email.php", {
+    const response = await fetch(location.href+'backend/enviar-email.php', {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData),
@@ -28,7 +29,6 @@ export const Form = () => {
     const result = await response.text();
     alert(result);
   };
-
   return (
     <form className="flex flex-col lg:flex-row flex-wrap lg:justify-center gap-4 py-4 items-center" onSubmit={handleSubmit}>
       <InputGroup labelForAndInputName="name" labelText="Nome*" inputType="text" onChange={handleChange} />
