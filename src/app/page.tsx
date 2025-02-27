@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Header/>
-      <main className="relative">
+      <main className="relative overflow-x-hidden">
         <Banner/>
         <Partners/>
         <DifferentThinking/>
