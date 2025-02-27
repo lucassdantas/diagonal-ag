@@ -2,7 +2,6 @@ import { Button } from '@/app/components/Button'
 import { Limiter } from '@/app/components/Limiter'
 import { Forms } from '@/app/components/sections/Banner/Forms'
 import { Title } from '@/app/components/Title'
-import Image from 'next/image'
 import React from 'react'
 
 export const Banner = () => {

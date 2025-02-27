@@ -1,8 +1,6 @@
 import { Button } from '@/app/components/Button'
-import Image from 'next/image'
 import React from 'react'
 import { BiSolidRightArrow } from 'react-icons/bi'
-import moveResultsImage from '@/assets/movemos-resultados.png'
 import { Section } from '@/app/components/Section'
 import { Title } from '@/app/components/Title'
 export const DifferentThinking = () => {
@@ -24,7 +22,7 @@ export const DifferentThinking = () => {
         </div>
       </div>
       <div className='lg:w-[40%]'>
-        <Image src={moveResultsImage} alt='movemos resultados'/>
+        <img src={'/assets/movemos-resultados.png'} alt='movemos resultados'/>
       </div>
     </Section>
   )

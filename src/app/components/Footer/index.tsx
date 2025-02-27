@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import React from 'react'
-import diagonalLogoWithoutBg from '@/assets/diagonal-logo-vazada.png'
 import { allSocialNetworksList } from '@/utils/socialNetwork'
 import Link from 'next/link'
 import { Title } from '@/app/components/Title'
@@ -10,7 +8,7 @@ export const Footer = () => {
     <footer className=' bg-main_black text-main_white pt-8 text-center '>
       <div className='flex flex-col items-center gap-4 px-4 mb-12'>
         <p>Pense <span className='text-purple_60'>diferente</span>. Pense na <span className='text-purple_60'>Diagonal</span>.</p>
-        <Image src={diagonalLogoWithoutBg} alt='Logo diagonal vazada'/>
+        <img src={'/assets/diagonal-logo-vazada.png'} alt='Logo diagonal vazada'/>
         <Title tag='h6' className='font-normal mt-4'>Confira nossas redes sociais:</Title>
         <div className='flex gap-4 justify-center'>
           {allSocialNetworksList.map((socialNetowrk:any, i) => ( <Link href={socialNetowrk.url} target='_blank' key={i}><socialNetowrk.icon className='text-purple_40 text-3xl'/></Link>))}

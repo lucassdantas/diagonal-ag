@@ -1,7 +1,6 @@
 import { Section } from '@/app/components/Section'
 import { Title } from '@/app/components/Title'
 import { partnersLogos } from '@/utils/partnersLogos'
-import Image from 'next/image'
 import React from 'react'
 
 export const Partners = () => {
@@ -12,7 +11,7 @@ export const Partners = () => {
       <Title className='text-2xl mb-4' tag='h2'>Marcas que movem pessoas contam com a Diagonal</Title>
       <div className='flex items-center justify-between flex-wrap'>
         {partnersLogos.map((partner, i:number) => (
-          <div className='w-1/2 flex justify-center items-center p-5' key={i}> <Image src={ partner } alt='Logo' className='text-center'/> </div>
+          <div className='w-1/2 flex justify-center items-center p-5' key={i}> <img src={ partner } alt='Logo' className='text-center'/> </div>
         ))}
       </div>
     </Section>
