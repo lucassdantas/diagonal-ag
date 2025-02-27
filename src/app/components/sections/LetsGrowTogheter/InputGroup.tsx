@@ -21,7 +21,7 @@ export const InputGroup = ({
 }: InputGroupProps) => {
   return (
     <div className={`flex flex-col w-full lg:w-[49%] ${containerClassName}`}>
-      <label htmlFor={labelForAndInputName} className={`text-purple_30 ${labelClassName}`}>
+      <label htmlFor={labelForAndInputName} className={`text-purple_30 mb-2 ${labelClassName}`}>
         {labelText}
       </label>
       <input

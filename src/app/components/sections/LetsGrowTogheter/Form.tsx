@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { InputGroup } from "@/app/components/sections/LetsGrowTogheter/InputGroup";
+import { PhoneInputGroup } from "@/app/components/sections/LetsGrowTogheter/PhoneInputGroup";
 
 export const Form = () => {
   const [formData, setFormData] = useState({
@@ -12,27 +13,32 @@ export const Form = () => {
     position: "",
   });
 
-  const [message, setMessage] = useState<string | null>(null); // Estado para a mensagem de resposta
+  const [message, setMessage] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handlePhoneChange = (phone: string) => {
+    setFormData({ ...formData, phone });
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setMessage(null); // Resetar mensagem ao iniciar o envio
-  
+    setMessage(null);
+
     try {
       const currentUrl = location.protocol + '//' + location.hostname + '/backend/send-email.php';
+
       const response = await fetch(currentUrl, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData),
       });
-  
-      const result = await response.json(); // Agora interpretamos como JSON
+
+      const result = await response.json();
       if (result.success) {
-        setMessage("✅ " + result.message);
+        setMessage( result.message);
         setFormData({
           name: "",
           companyName: "",
@@ -41,24 +47,26 @@ export const Form = () => {
           position: "socio_fundador",
         });
       } else {
-        setMessage("❌ " + result.message);
+        setMessage( result.message);
       }
     } catch (error) {
-      setMessage("❌ Erro ao enviar o formulário. Tente novamente.");
+      setMessage("Erro ao enviar o formulário. Tente novamente.");
     }
   };
 
   return (
     <form className="flex flex-col lg:flex-row flex-wrap lg:justify-center gap-4 py-4 items-center" onSubmit={handleSubmit}>
-      <InputGroup labelForAndInputName="name"        labelText="Nome*"              inputType="text"  value={formData.name}        onChange={handleChange} />
-      <InputGroup labelForAndInputName="companyName" labelText="Nome da empresa*"   inputType="text"  value={formData.companyName} onChange={handleChange} />
-      <InputGroup labelForAndInputName="email"       labelText="Email corporativo*" inputType="email" value={formData.email}       onChange={handleChange} />
-      <InputGroup labelForAndInputName="phone"       labelText="Telefone*"          inputType="tel"   value={formData.phone}       onChange={handleChange} />
+      <InputGroup labelForAndInputName="name" labelText="Nome*" inputType="text" value={formData.name} onChange={handleChange} />
+      <InputGroup labelForAndInputName="companyName" labelText="Nome da empresa*" inputType="text" value={formData.companyName} onChange={handleChange} />
+      <InputGroup labelForAndInputName="email" labelText="Email corporativo*" inputType="email" value={formData.email} onChange={handleChange} />
+
+      {/* Novo componente PhoneInput */}
+      <PhoneInputGroup value={formData.phone} onChange={handlePhoneChange} />
 
       <div className="flex flex-col w-full">
-        <label htmlFor="position" className="text-purple_30">Cargo*</label>
+        <label htmlFor="position" className="text-purple_30 mb-2">Cargo*</label>
         <select className="bg-purple_70 border border-purple_40 rounded-lg p-2 text-purple_30" name="position" onChange={handleChange} value={formData.position} required>
-          <option value="" disabled={true}>Selecione seu cargo</option>
+          <option value="" disabled>Selecione seu cargo</option>
           <option value="socio_fundador">Sócio/Fundador</option>
           <option value="diretor_executivo">Diretor Executivo</option>
           <option value="diretor_gerente_marketing">Diretor/Gerente de Marketing</option>
@@ -71,8 +79,6 @@ export const Form = () => {
 
       <div className="w-full text-center">
         <input type="submit" value="Quero uma proposta personalizada" className="rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer p-4" />
-        
-        {/* Exibir mensagem de feedback */}
         {message && <p className="mt-4 text-lg font-bold">{message}</p>}
       </div>
     </form>
