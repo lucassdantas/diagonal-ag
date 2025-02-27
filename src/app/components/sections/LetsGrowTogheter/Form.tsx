@@ -9,7 +9,7 @@ export const Form = () => {
     companyName: "",
     email: "",
     phone: "",
-    position: "socio_fundador",
+    position: "",
   });
 
   const [message, setMessage] = useState<string | null>(null); // Estado para a mensagem de resposta
@@ -57,7 +57,8 @@ export const Form = () => {
 
       <div className="flex flex-col w-full">
         <label htmlFor="position" className="text-purple_30">Cargo*</label>
-        <select className="bg-purple_70 border border-purple_40 rounded-lg p-2" name="position" onChange={handleChange} value={formData.position}>
+        <select className="bg-purple_70 border border-purple_40 rounded-lg p-2 text-purple_30" name="position" onChange={handleChange} value={formData.position} required>
+          <option value="" disabled={true}>Selecione seu cargo</option>
           <option value="socio_fundador">Sócio/Fundador</option>
           <option value="diretor_executivo">Diretor Executivo</option>
           <option value="diretor_gerente_marketing">Diretor/Gerente de Marketing</option>
