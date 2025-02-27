@@ -19,7 +19,7 @@ export const DifferentThinking = () => {
         <ul className='flex flex-col'>
           {listItems.map((item, i) => (<li key={i} className='flex gap-4 items-center'> <BiSolidRightArrow className='text-purple_60'/>{item.text}</li>))}
         </ul>
-        <div className="w-full flex justify-center my-4">
+        <div className="w-full flex justify-center lg:justify-start my-4">
           <Button url='#form'>Fale com a gente</Button>
         </div>
       </div>
