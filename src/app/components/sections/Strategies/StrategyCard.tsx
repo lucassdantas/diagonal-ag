@@ -19,7 +19,7 @@ export const StrategyCard = ({icon, title, description, list, buttonText}:Strate
           {list.map((item, i) => (<li key={i} className='flex gap-4 items-center'><item.icon className='text-purple_60'/> {item.text}</li> ))}
         </ul>
         <div className='w-full mt-4 mb-8 flex justify-center'>
-          <OutlineButton url='#form'>{buttonText}</OutlineButton>
+          <OutlineButton url='#contato'>{buttonText}</OutlineButton>
         </div>
       </div>
     </div>
