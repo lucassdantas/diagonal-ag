@@ -9,3 +9,13 @@ export const SvgBars = ({className=''}:{className?:string}) => {
 
   )
 }
+
+export const DesktopSvgBars = ({className=''}:{className?:string}) => {
+  return(
+    <svg width="299" height="428" viewBox="0 0 299 428" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M0.710059 338.507L121.708 0.5H260.388L139.391 338.507H0.710059Z" stroke="#9E67D7"/>
+      <path d="M38.6117 426.944L159.609 88.9375H298.29L177.292 426.944H38.6117Z" stroke="#9E67D7"/>
+    </svg>
+  )
+}
+
