@@ -14,7 +14,7 @@ export const Header = () => {
               <li><Link href='#quem-somos'>Quem somos</Link></li>
               <li><Link href='#servicos'>O que fazemos</Link></li>
               <li><OutlineButton url='#contato' className='text-purple_50 border-purple_50'>Entre em contato</OutlineButton></li>
-              <li><Button className='text-main_black'>Já sou cliente</Button></li>
+              <li><Button className='text-main_black' url='https://app.diagonal.ag/login' target='_blank'>Já sou cliente</Button></li>
             </ul>
           </nav>
         </div>

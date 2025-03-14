@@ -12,7 +12,7 @@ export const DifferentThinking = () => {
   return (
     <Section id='quem-somos' className='py-12 lg:text-left' limiterClassName='lg:flex items-center justify-between'>
       <div className='flex flex-col gap-4 mb-8 items-start lg:w-[50%]'>
-        <Title tag='h2'>Pensamos diferente. <br/><span className='text-purple_60'>Movemos resultados.</span></Title>
+        <Title tag='h2' className='lg:w-full w-[350px]'>Pensamos diferente. <span className='text-purple_60'>Movemos resultados.</span></Title>
         <p className='lg:max-w-full max-w-[340px]'>Criamos estratégias completas para seu negócio crescer no mundo do Fitness & Wellness. Do posicionamento da sua marca ao crescimento digital, somos especialistas em transformar presença em performance.</p>
         <ul className='flex flex-col'>
           {listItems.map((item, i) => (<li key={i} className='flex gap-4 items-center'> <BiSolidRightArrow className='text-purple_60'/>{item.text}</li>))}
