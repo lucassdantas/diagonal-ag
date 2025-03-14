@@ -27,7 +27,7 @@ export const PhoneInputGroup = ({ value, onChange }: PhoneInputProps) => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:w-[49%]">
+    <div className="flex flex-col w-full ">
       <label htmlFor='phone' className="text-purple_30 mb-2">Telefone*</label>
       <div className="flex gap-2">
         <select className="bg-purple_70 border border-purple_40 rounded-lg p-2" value={countryCode} onChange={handleCountryChange}>

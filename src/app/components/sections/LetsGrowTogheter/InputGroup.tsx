@@ -20,7 +20,7 @@ export const InputGroup = ({
   onChange, // Recebe a função de mudança
 }: InputGroupProps) => {
   return (
-    <div className={`flex flex-col w-full lg:w-[49%] ${containerClassName}`}>
+    <div className={`flex flex-col w-full ${containerClassName}`}>
       <label htmlFor={labelForAndInputName} className={`text-purple_30 mb-2 ${labelClassName}`}>
         {labelText}
       </label>

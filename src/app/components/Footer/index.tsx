@@ -9,6 +9,7 @@ export const Footer = () => {
       <div className='flex flex-col items-center gap-4 px-4 mb-12'>
         <p>Pense <span className='text-purple_60'>diferente</span>. Pense na <span className='text-purple_60'>Diagonal</span>.</p>
         <img src={'/assets/diagonal-logo-vazada.png'} alt='Logo diagonal vazada'/>
+        <img className='max-w-[73px] lg:max-w-[172px]' src={'/assets/footer/clickup-verified-logo.png'} alt='clickup verified logo'/>
         <Title tag='h6' className='font-normal mt-4'>Confira nossas redes sociais:</Title>
         <div className='flex gap-4 justify-center'>
           {allSocialNetworksList.map((socialNetowrk:any, i) => ( <Link href={socialNetowrk.url} target='_blank' key={i}><socialNetowrk.icon className='text-purple_40 text-3xl'/></Link>))}
