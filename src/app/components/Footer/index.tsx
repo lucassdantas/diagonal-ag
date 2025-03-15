@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className='flex gap-4 justify-center w-1/3'>
             {allSocialNetworksList.map((socialNetowrk:any, i) => ( <Link href={socialNetowrk.url} target='_blank' key={i}><socialNetowrk.icon className='text-purple_40 text-3xl'/></Link>))}
           </div>
-          <div className='w-1/3 flex justify-center absolute right-0'>
+          <div className='w-1/3 lg:flex hidden  justify-center absolute right-0'>
             <img className='max-w-[172px] text-center' src={'/assets/footer/clickup-verified-logo.png'} alt='clickup verified logo'/>
           </div>
         </div>
