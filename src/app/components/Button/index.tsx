@@ -7,9 +7,9 @@ type ButtonProps = {
   url?:string;
   target?:string;
 }
-export const Button = ({children, className='', url='#', target='_self'}:ButtonProps) => {
+export const Button = ({children, className='text-white', url='#', target='_self'}:ButtonProps) => {
   return (
-    <Link className={'rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer max-w-[300px] w-full p-4 '+className} href={url} target={target}>{children}</Link>
+    <Link className={'rounded-2xl bg-purple_50 text-center py-4 font-bold cursor-pointer max-w-[300px] w-full p-4 '+className} href={url} target={target}>{children}</Link>
   )
 }
 export const OutlineButton = ({children, className='', url='#', target='_self'}:ButtonProps) => {

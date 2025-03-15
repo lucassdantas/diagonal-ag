@@ -55,7 +55,7 @@ export const Form = () => {
   };
 
   return (
-    <form className="flex flex-col flex-wrap lg:justify-center gap-4 lg:gap-8 py-4 items-center" onSubmit={handleSubmit}>
+    <form className="flex flex-col flex-wrap lg:justify-center gap-4 lg:gap-8 pt-4 items-center" onSubmit={handleSubmit}>
       <InputGroup labelForAndInputName="name" labelText="Nome*" inputType="text" value={formData.name} onChange={handleChange} />
       <InputGroup labelForAndInputName="companyName" labelText="Nome da empresa*" inputType="text" value={formData.companyName} onChange={handleChange} />
       <InputGroup labelForAndInputName="email" labelText="Email corporativo*" inputType="email" value={formData.email} onChange={handleChange} />
@@ -77,7 +77,7 @@ export const Form = () => {
       </div>
 
       <div className="w-full text-center lg:text-left mt-4">
-        <input type="submit" value="Quero uma proposta personalizada" className="rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer p-4" />
+        <input type="submit" value="Quero uma proposta personalizada" className="rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer p-4 w-full max-w-[340px] lg:max-w-full" />
         {message && <p className="mt-4 text-lg font-bold">{message}</p>}
       </div>
     </form>

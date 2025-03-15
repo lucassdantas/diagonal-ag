@@ -14,8 +14,8 @@ export const DifferentThinking = () => {
       <div className='flex flex-col gap-4 mb-8 items-start lg:w-[50%] overflow-x-hidden'>
         <Title tag='h2' className='lg:w-full w-[350px]'>Pensamos diferente. <span className='text-purple_60'>Movemos resultados.</span></Title>
         <p className='lg:max-w-full max-w-[340px]'>Criamos estratégias completas para seu negócio crescer no mundo do Fitness & Wellness. Do posicionamento da sua marca ao crescimento digital, somos especialistas em transformar presença em performance.</p>
-        <ul className='flex flex-col'>
-          {listItems.map((item, i) => (<li key={i} className='flex gap-4 items-center'> <BiSolidRightArrow className='text-purple_60'/>{item.text}</li>))}
+        <ul className='flex flex-col gap-3'>
+          {listItems.map((item, i) => (<li key={i} className='flex gap-2 items-center'> <BiSolidRightArrow className='text-purple_60 max-w-[20px] min-w-[20px]' fontSize={20} /> {item.text}</li>))}
         </ul>
         <div className="w-full flex justify-center lg:justify-start my-4">
           <Button url='#contato'>Fale com a gente</Button>

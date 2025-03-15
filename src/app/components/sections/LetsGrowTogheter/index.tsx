@@ -6,11 +6,11 @@ import React from 'react'
 
 export const LetsGrowTogheter = () => {
   return (
-    <Section className='relative text-main_white bg-purple_70 py-8 lg:py-32' id='contato'>
+    <Section className='relative text-main_white bg-purple_70 pt-8 pb-4 lg:py-32' id='contato'>
       <div className='flex lg:flex-row flex-col gap-48 lg:items-center'>
         <div className="flex-col items-start">
-          <Title tag='h2' className='max-w-[280px] lg:max-w-full text-3xl lg:mb-8'>Vamos crescer juntos?</Title>
-          <SvgBars className='absolute lg:hidden -right-8 -top-14'/>
+          <Title tag='h2' className='max-w-[280px] lg:max-w-full text-3xl mb-8'>Vamos crescer juntos?</Title>
+          <SvgBars className='absolute lg:hidden -right-8 -top-0'/>
           <p className='lg:pr-0 pr-4 mb-4'>Descubra como podemos impulsionar seu negócio no mercado Fitness & Wellness.</p>
           <Form/>
         </div>

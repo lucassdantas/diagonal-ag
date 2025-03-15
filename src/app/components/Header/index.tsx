@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 export const Header = () => {
   return (
-    <header className='bg-main_black pt-8 overflow-x-hidden'>
+    <header className='bg-main_black pt-6 overflow-x-hidden'>
       <Limiter className='flex justify-between max-lg:gap-4'>
-        <img src={'/assets/diagonal-logo.png'} alt='Logo Diagonal' className='object-contain max-lg:w-1/2'/>
+        <img src={'/assets/diagonal-logo.png'} alt='Logo Diagonal' className='object-contain max-lg:w-1/2 max-w-[160px]'/>
         
         <div className='hidden lg:block '>
           <nav>
