@@ -11,7 +11,7 @@ export const DifferentThinking = () => {
   ]
   return (
     <Section id='quem-somos' className='py-12 lg:text-left' limiterClassName='lg:flex items-center justify-between'>
-      <div className='flex flex-col gap-4 mb-8 items-start lg:w-[50%]'>
+      <div className='flex flex-col gap-4 mb-8 items-start lg:w-[50%] overflow-x-hidden'>
         <Title tag='h2' className='lg:w-full w-[350px]'>Pensamos diferente. <span className='text-purple_60'>Movemos resultados.</span></Title>
         <p className='lg:max-w-full max-w-[340px]'>Criamos estratégias completas para seu negócio crescer no mundo do Fitness & Wellness. Do posicionamento da sua marca ao crescimento digital, somos especialistas em transformar presença em performance.</p>
         <ul className='flex flex-col'>

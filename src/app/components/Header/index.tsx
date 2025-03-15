@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 export const Header = () => {
   return (
-    <header className='bg-main_black pt-8'>
-      <Limiter className='flex justify-between'>
-        <img src={'/assets/diagonal-logo.png'} alt='Logo Diagonal' className='object-contain'/>
+    <header className='bg-main_black pt-8 overflow-x-hidden'>
+      <Limiter className='flex justify-between max-lg:gap-4'>
+        <img src={'/assets/diagonal-logo.png'} alt='Logo Diagonal' className='object-contain max-lg:w-1/2'/>
         
         <div className='hidden lg:block '>
           <nav>
@@ -19,7 +19,7 @@ export const Header = () => {
           </nav>
         </div>
         
-          <Button className='text-main_black lg:hidden'>Já sou cliente</Button>
+        <Button className='text-main_black lg:hidden max-w-fit max-h-[100px] flex items-center'>Já sou cliente</Button>
       </Limiter>
     </header>
   )
