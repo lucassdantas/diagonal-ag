@@ -11,7 +11,7 @@ export const Forms = () => {
 
 const SvgForms = () => {
   return (
-    <div className="flex gap-4 mx-2">
+    <div className="flex gap-4 mx-2 h-[105px] overflow-y-hidden">
       <svg width="100" height="100" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="63.5" cy="63.5" r="63" stroke="#CB99FF" strokeWidth="2" fill="none" />
       </svg>

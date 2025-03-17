@@ -9,7 +9,7 @@ type ButtonProps = {
 }
 export const Button = ({children, className='text-white', url='#', target='_self'}:ButtonProps) => {
   return (
-    <Link className={'rounded-2xl bg-purple_50 text-center py-4 font-bold cursor-pointer max-w-[300px] w-full p-4 hover:bg-purple_40 '+className} href={url} target={target}>{children}</Link>
+    <Link className={'rounded-2xl bg-purple_50 text-center  font-bold cursor-pointer max-w-[300px] w-full p-4 hover:bg-purple_40 '+className} href={url} target={target}>{children}</Link>
   )
 }
 export const OutlineButton = ({children, className='text-purple_60 border-purple_60', url='#', target='_self'}:ButtonProps) => {
