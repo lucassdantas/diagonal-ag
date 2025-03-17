@@ -11,7 +11,7 @@ export const Partners = () => {
       <Title className='text-2xl mb-4' tag='h2'>Marcas que movem pessoas contam com a Diagonal</Title>
       <div className='flex items-center justify-between flex-wrap lg:flex-nowrap max-w-[328px] lg:max-w-full'>
         {partnersLogos.map((partner, i:number) => (
-          <div className='w-1/2 flex justify-center items-center my-6 px-4' key={i}> <img src={ partner } alt='Logo' className='text-center w-full'/> </div>
+          <div className='w-1/2  flex justify-center items-center my-6 px-4 lg:px-7' key={i}> <img src={ partner } alt='Logo' className='text-center w-full'/> </div>
         ))}
       </div>
     </Section>

@@ -77,7 +77,7 @@ export const Form = () => {
       </div>
 
       <div className="w-full text-center lg:text-left mt-4">
-        <input type="submit" value="Quero uma proposta personalizada" className="rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer p-4 w-full max-w-[340px] lg:max-w-full" />
+        <input type="submit" value="Quero uma proposta personalizada" className="rounded-2xl text-white bg-purple_50 text-center py-4 font-bold cursor-pointer p-4 w-full max-w-[340px] lg:max-w-full hover:bg-purple_40" />
         {message && <p className="mt-4 text-lg font-bold">{message}</p>}
       </div>
     </form>
