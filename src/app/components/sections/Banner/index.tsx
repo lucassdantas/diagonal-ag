@@ -8,7 +8,7 @@ export const Banner = () => {
   return (
     <section className='bg-main_black text-white text-center pt-8 pb-28 flex flex-col items-center gap-8'>
       <Limiter className='flex flex-col items-center'>
-        <Title className='font-bold lg:px-0 w-[255px] lg:w-full' tag='h1'>Somos a diagonal <span className='text-purple_40'>.</span></Title>
+        <Title className='font-bold lg:px-0 w-[255px] lg:w-full' tag='h1'>Somos a diagonal<span className='text-purple_40'>.</span></Title>
         <Title tag='h2' className='my-4 max-w-[344px] lg:max-w-[500px]'>Movemos negócios e pessoas no <span className='text-purple_40'>Fitness & Wellness</span></Title>
       </Limiter>
       <Forms/>
