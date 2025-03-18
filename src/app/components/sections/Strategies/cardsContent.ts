@@ -10,7 +10,7 @@ export const cardsContent:StrategyCardProps[] = [
     list:[
       {icon:IoTriangleSharp, text:'Aumento de alunos e recorrência'},
       {icon:FaSquare, text:'Relatórios claros e ROI real.'},
-      {icon:FaCircle, text:'Relatórios claros e ROI real.'}
+      {icon:FaCircle, text:'Campanhas otimizadas com foco em performance.'}
     ],
     buttonText:'Quero crescer com performance'
   },
@@ -28,7 +28,7 @@ export const cardsContent:StrategyCardProps[] = [
   {
     icon:brandingAndVisualIdentity,
     title:'Branding & Identidade Visual',
-    description:'Criação de logotipos, identidade visual, design para redes sociais e sites.',
+    description:'Criação de logotipos, identidade visual, e auditoria de design para redes sociais.',
     list:[
       {icon:IoTriangleSharp, text:'Posicionamento sólido e diferenciado.'},
       {icon:FaSquare, text:'Reconhecimento de marca no mercado.'},
