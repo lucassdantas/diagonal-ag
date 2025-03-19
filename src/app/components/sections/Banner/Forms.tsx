@@ -13,7 +13,7 @@ const SvgForms = ({className=''}:{className:string}) => {
   return (
     <svg width="1178" height="131" viewBox="0 0 1178 131" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       <g filter="url(#filter0_d_419_52)">
-        <rect x="607.5" y="5.5" width="117" height="117" stroke="#CB99FF" shapeRendering="optimizeQuality"/>
+        <rect x="608" y="6" width="117" height="117" stroke="#CB99FF" shapeRendering="optimizeQuality"/>
       </g>
       <g filter="url(#filter1_d_419_52)">
         <path d="M921.756 122.5L954.477 45.5H1005.52L1038.24 122.5H921.756Z" stroke="#CB99FF" shapeRendering="optimizeQuality"/>
