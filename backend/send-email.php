@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Configurar remetente e destinatário
         $mail->setFrom($smtpEmail, $name);
-        $mail->addAddress($smtpEmail); // Para onde o formulário será enviado
+        $mail->addAddress($emailReceiver); // Para onde o formulário será enviado
         $mail->addReplyTo($email, $name); // Permite responder ao remetente
 
         // Conteúdo do e-mail
